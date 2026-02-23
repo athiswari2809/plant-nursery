@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cart | Green Leaf Nursery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- HEADER WITH IMG SRC -->
+    <header style="position: relative; height: 300px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;">
+        
+        <!-- Background Image for Cart Page -->
+        <img src="https://t4.ftcdn.net/jpg/00/61/12/91/240_F_61129197_GZ2JU49e6DvZK7c8TCUZzgeMLVoRJtKP.jpg" 
+             alt="Nursery Cart" 
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(40%);">
+
+        <h1 style="margin: 0; font-size: 3rem;">🛒 Your Shopping Cart</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">Ready to bring your plants home?</p>
+    </header>
+
+    <!-- NAVIGATION WITH WIDE SPACE -->
+    <nav style="background: #1b5e20; padding: 20px; text-align: center;">
+        <a href="index.html" style="color: white; text-decoration: none; margin: 0 40px; font-weight: bold; font-size: 1.1rem;">Home</a>
+        <a href="plants.html" style="color: white; text-decoration: none; margin: 0 40px; font-weight: bold; font-size: 1.1rem;">Plants</a>
+        <a href="cart.html" style="color: white; text-decoration: none; margin: 0 40px; font-weight: bold; font-size: 1.1rem;">Cart</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin: 0 40px; font-weight: bold; font-size: 1.1rem;">About</a>
+        <a href="contact.html" style="color: white; text-decoration: none; margin: 0 40px; font-weight: bold; font-size: 1.1rem;">Contact</a>
+    </nav>
+
+    <!-- CART CONTAINER -->
+    <div class="container" style="background:white; border-radius:15px; padding:30px; max-width:600px; margin: 50px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+        <h2 style="color: #1b5e20;">Selected Plants</h2>
+        <ul id="cartItems" style="padding:0; list-style: none;">
+            <!-- Items added via script.js appear here -->
+        </ul>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <h3 style="font-size: 1.5rem;">Total: <span style="color: #2e7d32;">₹<span id="cartTotal">0</span></span></h3>
+        
+        <button class="add-btn" style="width:100%; background: #2f7d32; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; margin-top: 10px;" onclick="alert('Thank you! Your order has been placed.')">
+            Proceed to Checkout
+        </button>
+        
+        <p style="margin-top: 20px; color: #888; font-size: 0.9rem; cursor: pointer;" onclick="localStorage.clear(); location.reload();">Empty Cart</p>
+    </div>
+
+    <footer style="background: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 50px;">
+        © 2026 Green Leaf Nursery
+    </footer>
+
+</body>
+</html>

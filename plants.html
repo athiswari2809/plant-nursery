@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Plants | Green Leaf Nursery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- HEADER WITH IMG SRC -->
+    <header style="position: relative; height: 300px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;">
+        <img src="https://media.istockphoto.com/id/1358479945/photo/plants-in-garden-center-or-street-market-sale-of-varietal-seedlings-of-flowers-in-pots.jpg?s=1024x1024&w=is&k=20&c=HsnaTNuRuOTxVh1IFQZjD68IBAY5RE48b4hXkWiGCT8=" 
+             alt="Nursery Plants" 
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(45%);">
+
+        <h1 style="margin: 0; font-size: 2.8rem;">🌿 Our Plant Collection</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">Premium Indoor, Outdoor, and Tree Varieties</p>
+    </header>
+
+    <!-- NAVIGATION WITH WIDE SPACE -->
+    <nav style="background: #1b5e20; padding: 20px; text-align: center;">
+        <a href="index.html" style="color: white; text-decoration: none; margin: 0 35px; font-weight: bold;">Home</a>
+        <a href="plants.html" style="color: white; text-decoration: none; margin: 0 35px; font-weight: bold;">Plants</a>
+        <a href="cart.html" style="color: white; text-decoration: none; margin: 0 35px; font-weight: bold;">🛒 Cart</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin: 0 35px; font-weight: bold;">About</a>
+        <a href="contact.html" style="color: white; text-decoration: none; margin: 0 35px; font-weight: bold;">Contact</a>
+    </nav>
+
+    <div class="container" style="padding: 40px; text-align: center;">
+        <div class="controls" style="margin-bottom: 40px;">
+            <input type="text" id="search" placeholder="Search plants..." onkeyup="searchPlant()" 
+                   style="padding: 12px; width: 300px; border-radius: 25px; border: 1px solid #ddd; margin-bottom: 20px;">
+            <br>
+            <button class="filter-btn" onclick="filterPlants('all')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">All</button>
+            <button class="filter-btn" onclick="filterPlants('indoor')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">Indoor</button>
+            <button class="filter-btn" onclick="filterPlants('outdoor')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">Outdoor</button>
+            <button class="filter-btn" onclick="filterPlants('tree')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">Trees</button>
+            <button class="filter-btn" onclick="filterPlants('creeper')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">Creepers</button>
+            <button class="filter-btn" onclick="filterPlants('croton')" style="cursor:pointer; padding: 8px 20px; margin: 5px; border-radius: 20px; border: 1px solid #2f7d32; background: white; color: #2f7d32; font-weight: bold;">Crotons</button>
+        </div>
+
+        <!-- INDOOR SECTION -->
+        <div class="card indoor" style="display: inline-block; width: 220px; margin: 15px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://media.istockphoto.com/id/2170686151/photo/pothos-houseplant-in-a-flower-pot-epipremnum-aureum.jpg?s=1024x1024&w=is&k=20&c=MoLyqzTQERz9nqlOyPmKfzODexKLqyexxBryBTDlo_A=" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+            <h3>Money Plant</h3>
+            <p class="price" style="color: #2e7d32; font-weight: bold;">₹150</p>
+            <button class="add-btn" onclick="addToCart('Money Plant', 150)" style="background: #2f7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+        </div>
+
+        <!-- OUTDOOR SECTION -->
+        <div class="card outdoor" style="display: inline-block; width: 220px; margin: 15px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://media.istockphoto.com/id/1191063916/photo/red-and-pink-bougainvillea-flower-stock-photo.jpg?s=1024x1024&w=is&k=20&c=uNEeNbirOmsG_SF9hOK6-pF91ZX0gXL5zBstHZKwuTg=" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+            <h3>Bougainvillea</h3>
+            <p class="price" style="color: #2e7d32; font-weight: bold;">₹280</p>
+            <button class="add-btn" onclick="addToCart('Bougainvillea', 280)" style="background: #2f7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+        </div>
+
+        <!-- TREE SECTION -->
+        <div class="card tree" style="display: inline-block; width: 220px; margin: 15px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://media.istockphoto.com/id/2187073800/photo/young-mango-trees-growing-in-a-pot-ready-to-be-transplant-into-fields.jpg?s=1024x1024&w=is&k=20&c=QLfcOGPThUoJCpeOnCm_6tXTlvowoBl-iL7e6yp2PuU=" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+            <h3>Mango Tree</h3>
+            <p class="price" style="color: #2e7d32; font-weight: bold;">₹350</p>
+            <button class="add-btn" onclick="addToCart('Mango Tree', 350)" style="background: #2f7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+        </div>
+
+        <!-- CREEPER SECTION -->
+        <div class="card creeper" style="display: inline-block; width: 220px; margin: 15px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://media.istockphoto.com/id/674688536/photo/blooming-chinese-honey-suckle-flowers-after-the-rain.jpg?s=1024x1024&w=is&k=20&c=sbTAlvPaVr8CSr6XHWbVFp3qijb9jSQBVTc1XrNJTQE=" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+            <h3>Rangoon Creeper</h3>
+            <p class="price" style="color: #2e7d32; font-weight: bold;">₹200</p>
+            <button class="add-btn" onclick="addToCart('Rangoon Creeper', 200)" style="background: #2f7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+        </div>
+
+        <!-- CROTON SECTION -->
+        <div class="card croton" style="display: inline-block; width: 220px; margin: 15px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="https://media.istockphoto.com/id/534337190/photo/croton.jpg?s=1024x1024&w=is&k=20&c=155sl7k41aFNyxQVYLqet6I2B1vkupg5d9QyJTssem0=" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+            <h3>Croton Petra</h3>
+            <p class="price" style="color: #2e7d32; font-weight: bold;">₹250</p>
+            <button class="add-btn" onclick="addToCart('Croton Petra', 250)" style="background: #2f7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <footer style="background: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">© 2026 Green Leaf Nursery</footer>
+</body>
+</html>

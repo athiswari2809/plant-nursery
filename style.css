@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f4;
+    color: #333;
+}
+
+/* Parallax Header */
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                      url('https://images.unsplash.com');
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Navigation with Space */
+nav {
+    background: #1b5e20;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 35px; /* Wide space between links */
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Controls & Container */
+.container {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 30px;
+}
+
+#search {
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #2f7d32;
+    color: #2f7d32;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Plant Cards */
+.card {
+    display: inline-block;
+    background: white;
+    width: 240px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    vertical-align: top;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    font-size: 18px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+button.add-btn {
+    background: #2f7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
